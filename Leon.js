@@ -99,21 +99,33 @@ updateUI();
 
 function updateUI(){
 
-scoreText.innerText = "Pontos: " + Math.floor(score);
-
-let bonusPercent = rebirths * 20;
-
-rebirthInfo.innerText =
-"Rebirths: " + rebirths +
-" | Bônus: +" + bonusPercent + "%";
-
-upgrades.forEach((u,i)=>{
-let btn = document.getElementById("up"+i);
-
-btn.innerText =
-u.name +
-" - Custo: " + u.cost +
-" (" + u.bought + "/3)";
-});
-
-}
+    scoreText.innerText = "Pontos: " + Math.floor(score);
+    
+    let bonusPercent = rebirths * 20;
+    
+    rebirthInfo.innerText =
+    "Rebirths: " + rebirths +
+    " | Bônus: +" + bonusPercent + "%";
+    
+    upgrades.forEach((u,i)=>{
+    
+    let btn = document.getElementById("up"+i);
+    
+    if(u.bought >= 3){
+    
+    btn.innerText = u.name + " - MAX!";
+    
+    btn.disabled = true;
+    
+    }else{
+    
+    btn.innerText =
+    u.name +
+    " - Custo: " + u.cost +
+    " (" + u.bought + "/3)";
+    
+    }
+    
+    });
+    
+    }
