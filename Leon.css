@@ -1,1 +1,61 @@
-
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    color:white;
+    text-align:center;
+    
+    /* Fundo do Leon */
+    background-image:url("https://i.imgur.com/2R6pK9n.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    }
+    
+    .overlay{
+    background:rgba(0,0,0,0.6);
+    min-height:100vh;
+    padding:20px;
+    }
+    
+    h1{
+    font-size:40px;
+    }
+    
+    #score{
+    font-size:30px;
+    margin:20px;
+    }
+    
+    #clickBtn{
+    font-size:25px;
+    padding:20px 40px;
+    border:none;
+    border-radius:10px;
+    background:red;
+    color:white;
+    cursor:pointer;
+    }
+    
+    #clickBtn:hover{
+    background:darkred;
+    }
+    
+    .shop{
+    margin-top:30px;
+    }
+    
+    .upgrade{
+    display:block;
+    margin:10px auto;
+    padding:10px;
+    width:250px;
+    border:none;
+    border-radius:8px;
+    background:#333;
+    color:white;
+    cursor:pointer;
+    }
+    
+    .upgrade:hover{
+    background:#555;
+    }
