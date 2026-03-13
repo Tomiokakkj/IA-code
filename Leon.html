@@ -13,33 +13,40 @@
 <h1>Leon Clicker</h1>
 
 <div id="score">Pontos: 0</div>
+<div id="rebirthInfo">Rebirths: 0 | Bônus: 0%</div>
 
 <button id="clickBtn">ATIRAR</button>
 
 <div class="shop">
-<h2>Upgrades</h2>
 
-<button class="upgrade" onclick="buyUpgrade(0)">
+<h2>Upgrades (máx 3)</h2>
+
+<button class="upgrade" id="up0" onclick="buyUpgrade(0)">
 Samurai Edge - Custo: 10
 </button>
 
-<button class="upgrade" onclick="buyUpgrade(1)">
+<button class="upgrade" id="up1" onclick="buyUpgrade(1)">
 Chicago Typewriter - Custo: 50
 </button>
 
-<button class="upgrade" onclick="buyUpgrade(2)">
+<button class="upgrade" id="up2" onclick="buyUpgrade(2)">
 Handcannon - Custo: 150
 </button>
 
-<button class="upgrade" onclick="buyUpgrade(3)">
+<button class="upgrade" id="up3" onclick="buyUpgrade(3)">
 Magnum Requiem - Custo: 400
 </button>
 
-<button class="upgrade" onclick="buyUpgrade(4)">
+<button class="upgrade" id="up4" onclick="buyUpgrade(4)">
 RPG-7 (Bazooka) - Custo: 1000
 </button>
 
 </div>
+
+<div class="rebirthBox">
+<button id="rebirthBtn" onclick="rebirth()">REBIRTH</button>
+</div>
+
 </div>
 
 <script src="script.js"></script>
