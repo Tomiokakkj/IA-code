@@ -30,34 +30,35 @@ return 1 + (rebirths * 0.20);
 
 function buyUpgrade(i){
 
-let upgrade = upgrades[i];
-
-if(upgrade.bought >= 3){
-alert("Limite atingido!");
-return;
-}
-
-if(score >= upgrade.cost){
-
-score -= upgrade.cost;
-
-upgrade.bought++;
-
-upgrade.cost = Math.floor(upgrade.cost * 1.2); // aumenta 20%
-
-recalculateClickPower();
-
-if(upgrade.bought >= 3){
-document.getElementById("up"+i).disabled = true;
-}
-
-updateUI();
-
-}else{
-alert("Pontos insuficientes!");
-}
-
-}
+    let upgrade = upgrades[i];
+    
+    if(upgrade.bought >= 3){
+    alert("Limite atingido!");
+    return;
+    }
+    
+    if(score >= upgrade.cost){
+    
+    score -= upgrade.cost;
+    
+    upgrade.bought++;
+    
+    // AUMENTO FORTE DO PREÇO
+    upgrade.cost = Math.floor(upgrade.cost * 1.2 * (upgrade.bought + 1));
+    
+    recalculateClickPower();
+    
+    if(upgrade.bought >= 3){
+    document.getElementById("up"+i).disabled = true;
+    }
+    
+    updateUI();
+    
+    }else{
+    alert("Pontos insuficientes!");
+    }
+    
+    }
 
 function recalculateClickPower(){
 
